@@ -1,10 +1,8 @@
 [package]
-name = "histogram"
+name = "wikipedia-word-counter"
 version = "0.1.0"
-authors = ["Alec Larsen <alec@unabridgedsoftware.com>"]
+authors = ["Alec Larsen <hello@alec.ninja>"]
 edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 lazy_static = "1.4.0"
