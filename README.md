@@ -17,18 +17,24 @@ Wikipedia Word Counter is a small utility to get the top 100,000 words in a
   dump. At the time of this writing, the dump that includes the text of the current version of all articles ends with
   `pages-meta-current`.
 
-  1. Run the dump through the counter (the dump goes on stdin and a CSV of the top words is written to stdout):
-  
-  ```bash
-  $ bzcat enwiki-20200301-pages-meta-current.xml.bz2 | target/release/wikipedia-word-counter > top-words.csv
-  ```
-     
-  On my machine with the dump from March 1st, 2020, this takes approximately an hour to run and uses around 1Gb of RAM.
-  You can get some sense of progress with the [`pv` utility](https://linux.die.net/man/1/pv):
-     
-  ```bash
-  $ pv enwiki-20200301-pages-meta-current.xml.bz2 | bzcat | target/release/wikipedia-word-counter > top-words.csv
-  ```
+  1.
+      Run the dump through the counter (the dump goes on stdin and a CSV of the top words is written to stdout):
+    
+      ```bash
+      $ bzcat enwiki-20200301-pages-meta-current.xml.bz2 | \
+          target/release/wikipedia-word-counter \
+          > top-words.csv
+      ```
+      
+      On my machine with the dump from March 1st, 2020, this takes approximately an hour to run and uses around 1Gb of RAM.
+      You can get some sense of progress with the [`pv` utility](https://linux.die.net/man/1/pv):
+      
+      ```bash
+      $ pv enwiki-20200301-pages-meta-current.xml.bz2 | \
+          bzcat | \
+          target/release/wikipedia-word-counter \
+          > top-words.csv
+      ```
 
 
 ## Contributing
