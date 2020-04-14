@@ -4,6 +4,11 @@ Wikipedia Word Counter is a small utility to get the top 100,000 words in a
 [Wikipedia dump file](https://dumps.wikimedia.org/).
 
 
+## Results
+
+In case you just want a list of the most common words in Wikipedia and do not want to bother with setting up a Rust toolchain. You can see the top 25,000 words in English Wikipeida (as of March 1st, 2020) in this [Pastebin](https://pastebin.com/25SmHptQ).
+
+
 ## Usage
 
   1. Download the latest version of [the Rust toolchain](https://rustup.rs/) and compile the program _in release mode_
@@ -26,7 +31,7 @@ Wikipedia Word Counter is a small utility to get the top 100,000 words in a
           > top-words.csv
       ```
       
-      On my machine with the dump from March 1st, 2020, this takes approximately an hour to run and uses around 1Gb of RAM.
+      On my machine with [the dump from March 1st, 2020](https://dumps.wikimedia.org/enwiki/20200301/enwiki-20200301-pages-meta-current.xml.bz2), this takes approximately an hour to run and uses around 1Gb of RAM.
       You can get some sense of progress with the [`pv` utility](https://linux.die.net/man/1/pv):
       
       ```bash
